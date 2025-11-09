@@ -18,12 +18,7 @@ connectDB();
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({
-  origin: "https://pharmaflowpcte.netlify.app",  // ✅ your frontend domain
-  credentials: true,                              // ✅ allow cookies/auth headers
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"]
-}));
+app.use(cors());
 
 // Routes
 app.use("/auth", authRoutes);
