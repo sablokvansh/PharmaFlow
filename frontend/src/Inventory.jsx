@@ -20,7 +20,7 @@ const Inventory = () => {
   // --- Fetch inventory from backend ---
   const fetchInventory = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/inventory");
+      const res = await axios.get("https://pharma-flow-nine.vercel.app/inventory");
       setInventoryData(res.data);
     } catch (err) {
       console.error("Error fetching inventory:", err);
@@ -48,7 +48,7 @@ const handleAddItem = async (e) => {
       status: newItem.total_quantity === "0" || newItem.total_quantity === 0 ? "Out of Stock" : newItem.status || "In Stock",
     };
 
-    await axios.post("http://localhost:5000/inventory", itemToAdd);
+    await axios.post("https://pharma-flow-nine.vercel.app/inventory", itemToAdd);
     fetchInventory();
     setNewItem({ name: "", capacity: "", material: "", total_quantity: "", status: "" });
     setShowModal(false);
@@ -66,7 +66,7 @@ const handleUpdateSubmit = async (e) => {
       status: updateItem.total_quantity === "0" || updateItem.total_quantity === 0 ? "Out of Stock" : updateItem.status,
     };
 
-    await axios.put(`http://localhost:5000/inventory/${updateItem._id}`, updated);
+    await axios.put(`https://pharma-flow-nine.vercel.app/inventory/${updateItem._id}`, updated);
     fetchInventory();
     setShowUpdateModal(false);
   } catch (err) {
@@ -79,7 +79,7 @@ const handleUpdateSubmit = async (e) => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this item?")) {
       try {
-        await axios.delete(`http://localhost:5000/inventory/${id}`);
+        await axios.delete(`https://pharma-flow-nine.vercel.app/inventory/${id}`);
         fetchInventory();
       } catch (err) {
         console.error("Error deleting item:", err);

@@ -20,7 +20,7 @@ const Signup = () => {
 
   const signupAPI = async () => {
     try {
-      const result = await axios.post("http://localhost:5000/auth/signup", formdata, {
+      const result = await axios.post("https://pharma-flow-nine.vercel.app/auth/signup", formdata, {
         withCredentials: true,
       });
 

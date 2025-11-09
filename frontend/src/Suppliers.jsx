@@ -20,7 +20,7 @@ const Suppliers = () => {
   // ✅ Fetch suppliers from backend
   const fetchSuppliers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/suppliers");
+      const res = await axios.get("https://pharma-flow-nine.vercel.app/suppliers");
       setSuppliers(res.data);
     } catch (err) {
       console.error("Error fetching suppliers:", err);
@@ -35,7 +35,7 @@ const Suppliers = () => {
 const handleDeleteSupplier = async (id) => {
   if (window.confirm("Are you sure you want to delete this supplier?")) {
     try {
-      await axios.delete(`http://localhost:5000/suppliers/${id}`);
+      await axios.delete(`https://pharma-flow-nine.vercel.app/suppliers/${id}`);
       fetchSuppliers();
       alert("Supplier deleted successfully!");
     } catch (err) {
@@ -57,11 +57,11 @@ const handleAddSupplier = async (e) => {
   try {
     if (newSupplier._id) {
       // Update existing supplier
-      await axios.put(`http://localhost:5000/suppliers/${newSupplier._id}`, newSupplier);
+      await axios.put(`https://pharma-flow-nine.vercel.app/suppliers/${newSupplier._id}`, newSupplier);
       alert("Supplier updated successfully!");
     } else {
       // Add new supplier
-      await axios.post("http://localhost:5000/suppliers", newSupplier);
+      await axios.post("https://pharma-flow-nine.vercel.app/suppliers", newSupplier);
       alert("Supplier added successfully!");
     }
     setShowModal(false);

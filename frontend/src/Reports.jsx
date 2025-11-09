@@ -18,7 +18,7 @@ export default function Reports() {
   // ✅ Fetch reports data
   const fetchReportData = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/reports");
+      const res = await axios.get("https://pharma-flow-nine.vercel.app/reports");
       setReportData(res.data);
     } catch (err) {
       console.error("Error fetching report data:", err);
@@ -28,7 +28,7 @@ export default function Reports() {
   // ✅ Fetch recent stock
   const fetchRecentStock = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/inventory"); // existing route
+      const res = await axios.get("https://pharma-flow-nine.vercel.app/inventory"); // existing route
       // Sort by last updated date (if available)
       const sorted = res.data.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
       setRecentStock(sorted.slice(0, 5)); // show latest 5 items
