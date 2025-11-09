@@ -7,10 +7,9 @@ import About from "./About";
 import Layout from "./Layout";
 import Suppliers from "./Suppliers";
 import Login from "./Login";
-import Signup from "./sign up";
+import Signup from "./SignUp";
 import GhostCursor from "./components/GhostCursor";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
-import Footer from "./components/Footer";
 
 function App() {
   const router = createBrowserRouter([

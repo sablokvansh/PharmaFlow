@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import glassVideo from "./glassvideo.mp4";
-import "./Sign up.css";
+import glassVideo from "./glassVideo.mp4";
+import "./SignUp.css";
 
 const Signup = () => {
   const navigate = useNavigate();
