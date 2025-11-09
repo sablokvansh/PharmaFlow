@@ -1,0 +1,93 @@
+/* ====== HEADER BASE STYLING ====== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c232a;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* LEFT SECTION — LOGO + TAGLINE */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-logo-text {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
+.flow-highlight {
+  color: #5ed7d6;
+}
+
+.tagline-text {
+  color: #cccccc;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+/* RIGHT SECTION — PILL NAV CONTAINER */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* ====== PILL NAV CUSTOMIZATION ====== */
+.custom-pill-nav {
+  --base: #5ed7d6;
+  --pill-bg: #1c232a;
+  --hover-text: #1c232a;
+  --pill-text: #ffffff;
+}
+
+.pill-nav-container {
+  position: relative;
+  top: 0;
+}
+
+.pill-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-left {
+    margin-bottom: 1rem;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .main-logo-text {
+    font-size: 1.5rem;
+  }
+
+  .tagline-text {
+    font-size: 0.7rem;
+  }
+}

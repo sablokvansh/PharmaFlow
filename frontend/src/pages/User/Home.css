@@ -1,0 +1,229 @@
+
+/* --- Base Layout & Positioning --- */
+.homepage-container {
+    background-color: #212529; /* A dark color similar to Bootstrap's bg-dark */
+    color: #fff;
+    min-height: 0vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+/* 🌌 Particle Background Wrapper */
+.particles-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bg-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 37, 41, 0.65);
+  backdrop-filter: blur(3px);
+}
+
+
+.bg-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: url(glass2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 37, 41, 0.6);
+}
+
+.main-content-wrapper {
+  position: relative;
+  z-index: 2; /* ensure content stays above Prism */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-grow: 1;
+  height: 84vh;
+  width: 100vw;
+}
+
+
+/* --- Typography & Text --- */
+.main-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.main-subtitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ced4da; /* Bootstrap's text-secondary equivalent */
+    max-width: 48rem;
+    margin-bottom: 3rem;
+}
+
+
+
+.placeholder-text {
+    color: #fff;
+    opacity: 0.75;
+    font-size: 0.875rem;
+}
+
+/* --- Feature Blocks --- */
+.feature-blocks-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem; /* Space between the blocks */
+    width: 100%;
+    max-width: 960px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.feature-block-col {
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis for responsive columns */
+}
+
+.feature-block-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(64, 70, 74, 0.5);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feature-block-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Bootstrap-like shadow */
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    color: #0dcaf0; /* Bootstrap's text-info equivalent */
+    margin-bottom: 1rem;
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.feature-description {
+    font-size: 0.875rem;
+    color: #ced4da;
+    text-align: center;
+}
+
+/* Media queries for enhanced responsiveness */
+
+/* Tablets and smaller laptops */
+@media (max-width: 992px) {
+    .main-heading {
+        font-size: 2.5rem;
+    }
+    .main-subtitle {
+        font-size: 1.1rem;
+    }
+    .animated-sphere-placeholder {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 2rem;
+        padding-top: 1rem;
+    }
+    .main-subtitle {
+        font-size: 1rem;
+    }
+    .animated-sphere-placeholder {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 2rem;
+    }
+    .feature-blocks-container {
+        flex-direction: column; /* Stack blocks vertically on mobile */
+        gap: 1.5rem;
+    }
+    .feature-block-col {
+        flex: 1 1 auto;
+    }
+    .feature-block-link {
+        padding: 1.5rem;
+    }
+}
+
+
+
+
+
+
+/* Small mobile devices */
+@media (max-width: 576px) {
+    .main-heading {
+        font-size: 1.5rem;
+    }
+    .main-subtitle {
+        font-size: 0.9rem;
+    }
+    .animated-sphere-placeholder {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 1.5rem;
+    }
+    .feature-block-link {
+        padding: 1rem;
+    }
+    .feature-icon {
+        width: 36px;
+        height: 36px;
+    }
+    .feature-title {
+        font-size: 1.1rem;
+    }
+    .feature-description {
+        font-size: 0.8rem;
+    }
+}
+/* Footer.css */
+footer {
+  position: relative;
+  z-index: 5; /* ensures it's above particles */
+  background: rgba(0, 0, 0, 0.6); /* optional soft overlay for clarity */
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}

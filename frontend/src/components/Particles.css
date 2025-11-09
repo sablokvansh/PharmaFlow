@@ -1,0 +1,36 @@
+/* Particles.css */
+
+.particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #0b0e14 40%, #111827 100%);
+  z-index: 0;
+  pointer-events: none;
+  filter: brightness(1.1) contrast(1.05) saturate(1.2);
+}
+
+/* Optional subtle glow for the whole background */
+.particles-canvas::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.04), rgba(0,0,0,0.6));
+  z-index: 1;
+}
+ /* Particles.css */
+
+/* Particles.css */
+.particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* stays behind content and footer */
+  background: transparent; /* remove any gray haze */
+  pointer-events: none; /* prevent blocking buttons/links */
+  filter: none; /* remove blur */
+}
